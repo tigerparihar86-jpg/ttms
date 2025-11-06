@@ -1,0 +1,411 @@
+/* Shared styles for RailBook pages */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: linear-gradient(135deg, #1a5276, #3498db);
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .3s;
+}
+
+nav ul li a:hover {
+  color: #f1c40f;
+}
+
+.hero {
+  background: url("https://www.bing.com/th/id/OIP.3kG9In8qFdMAZwp7k77LlgHaFf?w=230&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2");
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background .3s;
+  align-self: end;
+}
+
+.btn:hover {
+  background: #c0392b;
+}
+
+.features {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform .3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.trains {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.train-list {
+  display: grid;
+  gap: 20px;
+}
+
+.train-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+}
+
+.train-info h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.train-details {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.train-classes {
+  color: #777;
+}
+
+.train-price {
+  text-align: right;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.book-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background .3s;
+}
+
+.book-btn:hover {
+  background: #219653;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.footer-column ul li a:hover {
+  color: #3498db;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Seats styles */
+.train-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.legend {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.legend .box {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.seat-grid {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seat {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  background: blue;
+}
+
+
+/* available = RED, booked = GREEN (per request) */
+.available {
+  background: #e74c3c;
+}
+
+.unavailable {
+  background: #27ae60;
+}
+
+.controls {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.back {
+  text-decoration: none;
+  background: #e74c3c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+select {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.note {
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Utility */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .train-card {
+    grid-template-columns: 1fr;
+  }
+
+  .train-price {
+    text-align: left;
+  }
+}
+
+@media (max-width:600px) {
+  .seat {
+    width: 40px;
+    height: 40px;
+  }
+}
