@@ -1,0 +1,505 @@
+<!DOCTYPE html><!DOCTYPE html>
+
+<html lang="en"><html lang="en">
+
+<head><head>
+
+    <meta charset="UTF-8">    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Railway Booking System</title>    <title>Railway Booking System</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">    <link rel="stylesheet" href="styles.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></head>
+
+    <link rel="stylesheet" href="styles.css"><body>
+
+</head>    <header>
+
+<body>        <div class="container">
+
+    <header>            <div class="header-content">
+
+        <div class="container">                <div class="logo">
+
+            <div class="header-content">                    <span class="logo-icon">🚆</span>
+
+                <div class="logo">                    <h1>RailBook</h1>
+
+                    <span class="logo-icon">🚆</span>                </div>
+
+                    <h1>RailBook</h1>                <nav>
+
+                </div>                    <ul>
+
+                <nav>                        <li><a href="#">Home</a></li>
+
+                    <ul>                        <li><a href="#">Book Tickets</a></li>
+
+                        <li><a href="#">Home</a></li>                        <li><a href="#">My Bookings</a></li>
+
+                        <li><a href="#">Book Tickets</a></li>                        <li><a href="all-trains.html">All Trains</a></li>
+
+                        <li><a href="#">My Bookings</a></li>                        <li><a href="#">PNR Status</a></li>
+
+                        <li><a href="all-trains.html">All Trains</a></li>                        <li><a href="#">Login</a></li>
+
+                        <li><a href="#">PNR Status</a></li>                    </ul>
+
+                        <li><a href="#">Login</a></li>                </nav>
+
+                    </ul>            </div>
+
+                </nav>        </div>
+
+            </div>
+
+        </div>            <!-- Search Results (populated dynamically) -->
+
+            <section id="search-results" class="trains" style="display: none;">
+
+            <!-- Search Results (populated dynamically) -->                <div class="container">
+
+            <section id="search-results" class="trains" style="display: none;">                    <h2 class="section-title">Search Results</h2>
+
+                <div class="container">                    <div class="train-list" id="results-list">
+
+                    <h2 class="section-title">Search Results</h2>                        <!-- Results inserted here -->
+
+                    <div class="train-list" id="results-list">                    </div>
+
+                        <!-- Results inserted here -->                </div>
+
+                    </div>            </section>
+
+                </div>    </header>
+
+            </section>
+
+    </header>    <section class="hero">
+
+        <div class="container">
+
+    <section class="hero">            <div class="hero-content">
+
+        <div class="container">               <u><b><h2>Book Train Tickets Easily</h2></b></u>
+
+            <div class="hero-content">                <p>Find and book train tickets across India with our easy-to-use platform. Get the best deals and convenient travel options.</p>
+
+               <u><b><h2>Book Train Tickets Easily</h2></b></u>            </div>
+
+                <p>Find and book train tickets across India with our easy-to-use platform. Get the best deals and convenient travel options.</p>        </div>
+
+            </div>    </section>
+
+        </div>
+
+    </section>    <div class="container">
+
+        <div class="search-box">
+
+    <div class="container">            <form class="search-form">
+
+        <div class="search-box">                <div class="form-group">
+
+            <form class="search-form">                    <label for="from">From</label>
+
+                <div class="form-group">                    <select id="from" required>
+
+                    <label for="from">From</label>                        <option value="" disabled selected>Select departure station</option>
+
+                    <select id="from" required>                        <option value="NDLS">New Delhi (NDLS)</option>
+
+                        <option value="" disabled selected>Select departure station</option>                        <option value="MUMBAI">Mumbai Central (BCT)</option>
+
+                        <option value="NDLS">New Delhi (NDLS)</option>                        <option value="Kolkata">Howrah Junction (HWH)</option>
+
+                        <option value="MUMBAI">Mumbai Central (BCT)</option>                        <option value="Chennai">Chennai Central (MAS)</option>
+
+                        <option value="Kolkata">Howrah Junction (HWH)</option>                        <option value="Bangalore">Bengaluru City (SBC)</option>
+
+                        <option value="Chennai">Chennai Central (MAS)</option>                        <option value="Hyderabad">Hyderabad Deccan (HYB)</option>
+
+                        <option value="Bangalore">Bengaluru City (SBC)</option>                        <option value="Ahmedabad">Ahmedabad Junction (ADI)</option>
+
+                        <option value="Hyderabad">Hyderabad Deccan (HYB)</option>                        <option value="Pune">Pune Junction (PUNE)</option>
+
+                        <option value="Ahmedabad">Ahmedabad Junction (ADI)</option>                        <option value="Jaipur">Jaipur Junction (JP)</option>
+
+                        <option value="Pune">Pune Junction (PUNE)</option>                        <option value="Lucknow">Lucknow Charbagh (LKO)</option>
+
+                        <option value="Jaipur">Jaipur Junction (JP)</option>                        <option value="Kanpur">Kanpur Central (CNB)</option>
+
+                        <option value="Lucknow">Lucknow Charbagh (LKO)</option>                        <option value="Bhopal">Bhopal Junction (BPL)</option>
+
+                        <option value="Kanpur">Kanpur Central (CNB)</option>                        <option value="Patna">Patna Junction (PNBE)</option>
+
+                        <option value="Bhopal">Bhopal Junction (BPL)</option>                        <option value="Guwahati">Guwahati (GHY)</option>
+
+                        <option value="Patna">Patna Junction (PNBE)</option>                        <option value="Chandigarh">Chandigarh Junction (CDG)</option>
+
+                        <option value="Guwahati">Guwahati (GHY)</option>                        <option value="Amritsar">Amritsar Junction (ASR)</option>
+
+                        <option value="Chandigarh">Chandigarh Junction (CDG)</option>                        <option value="Varanasi">Varanasi Junction (BSB)</option>
+
+                        <option value="Amritsar">Amritsar Junction (ASR)</option>                        <option value="Nagpur">Nagpur Junction (NGP)</option>
+
+                        <option value="Varanasi">Varanasi Junction (BSB)</option>                        <option value="Coimbatore">Coimbatore Junction (CBE)</option>
+
+                        <option value="Nagpur">Nagpur Junction (NGP)</option>                        <option value="Kochi">Ernakulam Junction (ERS)</option>
+
+                        <option value="Coimbatore">Coimbatore Junction (CBE)</option>                    </select>
+
+                        <option value="Kochi">Ernakulam Junction (ERS)</option>                </div>
+
+                    </select>                <div class="form-group">
+
+                </div>                    <label for="to">To</label>
+
+                <div class="form-group">                    <select id="to" required>
+
+                    <label for="to">To</label>                        <option value="" disabled selected>Select arrival station</option>
+
+                    <select id="to" required>                        <option value="NDLS">New Delhi (NDLS)</option>
+
+                        <option value="" disabled selected>Select arrival station</option>                        <option value="MUMBAI">Mumbai Central (BCT)</option>
+
+                        <option value="NDLS">New Delhi (NDLS)</option>                        <option value="Kolkata">Howrah Junction (HWH)</option>
+
+                        <option value="MUMBAI">Mumbai Central (BCT)</option>                        <option value="Chennai">Chennai Central (MAS)</option>
+
+                        <option value="Kolkata">Howrah Junction (HWH)</option>                        <option value="Bangalore">Bengaluru City (SBC)</option>
+
+                        <option value="Chennai">Chennai Central (MAS)</option>                        <option value="Hyderabad">Hyderabad Deccan (HYB)</option>
+
+                        <option value="Bangalore">Bengaluru City (SBC)</option>                        <option value="Ahmedabad">Ahmedabad Junction (ADI)</option>
+
+                        <option value="Hyderabad">Hyderabad Deccan (HYB)</option>                        <option value="Pune">Pune Junction (PUNE)</option>
+
+                        <option value="Ahmedabad">Ahmedabad Junction (ADI)</option>                        <option value="Jaipur">Jaipur Junction (JP)</option>
+
+                        <option value="Pune">Pune Junction (PUNE)</option>                        <option value="Lucknow">Lucknow Charbagh (LKO)</option>
+
+                        <option value="Jaipur">Jaipur Junction (JP)</option>                        <option value="Kanpur">Kanpur Central (CNB)</option>
+
+                        <option value="Lucknow">Lucknow Charbagh (LKO)</option>                        <option value="Bhopal">Bhopal Junction (BPL)</option>
+
+                        <option value="Kanpur">Kanpur Central (CNB)</option>                        <option value="Patna">Patna Junction (PNBE)</option>
+
+                        <option value="Bhopal">Bhopal Junction (BPL)</option>                        <option value="Guwahati">Guwahati (GHY)</option>
+
+                        <option value="Patna">Patna Junction (PNBE)</option>                        <option value="Chandigarh">Chandigarh Junction (CDG)</option>
+
+                        <option value="Guwahati">Guwahati (GHY)</option>                        <option value="Amritsar">Amritsar Junction (ASR)</option>
+
+                        <option value="Chandigarh">Chandigarh Junction (CDG)</option>                        <option value="Varanasi">Varanasi Junction (BSB)</option>
+
+                        <option value="Amritsar">Amritsar Junction (ASR)</option>                        <option value="Nagpur">Nagpur Junction (NGP)</option>
+
+                        <option value="Varanasi">Varanasi Junction (BSB)</option>                        <option value="Coimbatore">Coimbatore Junction (CBE)</option>
+
+                        <option value="Nagpur">Nagpur Junction (NGP)</option>                        <option value="Kochi">Ernakulam Junction (ERS)</option>
+
+                        <option value="Coimbatore">Coimbatore Junction (CBE)</option>                    </select>
+
+                        <option value="Kochi">Ernakulam Junction (ERS)</option>                </div>
+
+                    </select>                <div class="form-group">
+
+                </div>                    <label for="date">Journey Date</label>
+
+                <div class="form-group">                    <input type="date" id="date" required>
+
+                    <label for="date">Journey Date</label>                </div>
+
+                    <input type="date" id="date" required>                <div class="form-group">
+
+                </div>                    <label for="class">Class</label>
+
+                <div class="form-group">                    <select id="class">
+
+                    <label for="class">Class</label>                        <option value="all">All Classes</option>
+
+                    <select id="class">                        <option value="1a">First AC</option>
+
+                        <option value="all">All Classes</option>                        <option value="2a">Second AC</option>
+
+                        <option value="1a">First AC</option>                        <option value="3a">Third AC</option>
+
+                        <option value="2a">Second AC</option>                        <option value="sl">Sleeper</option>
+
+                        <option value="3a">Third AC</option>                    </select>
+
+                        <option value="sl">Sleeper</option>                </div>
+
+                    </select>                <div class="form-group">
+
+                </div>                    <button type="submit" class="btn">Search Trains</button>
+
+                <div class="form-group">                </div>
+
+                    <button type="submit" class="btn">Search Trains</button>            </form>
+
+                </div>        </div>
+
+            </form>    </div>
+
+        </div>
+
+    </div>    <section class="features">
+
+        <div class="container">
+
+    <section class="features">            <h2 class="section-title">Why Choose Us</h2>
+
+        <div class="container">            <div class="features-grid">
+
+            <h2 class="section-title">Why Choose Us</h2>                <div class="feature-card">
+
+            <div class="features-grid">                    <div class="feature-icon">🎫</div>
+
+                <div class="feature-card">                    <h3>Easy Booking</h3>
+
+                    <div class="feature-icon">🎫</div>                    <p>Simple and intuitive ticket booking process with multiple payment options.</p>
+
+                    <h3>Easy Booking</h3>                </div>
+
+                    <p>Simple and intuitive ticket booking process with multiple payment options.</p>                <div class="feature-card">
+
+                </div>                    <div class="feature-icon">🔍</div>
+
+                <div class="feature-card">                    <h3>Live Tracking</h3>
+
+                    <div class="feature-icon">🔍</div>                    <p>Real-time train status and platform information for your convenience.</p>
+
+                    <h3>Live Tracking</h3>                </div>
+
+                    <p>Real-time train status and platform information for your convenience.</p>                <div class="feature-card">
+
+                </div>                    <div class="feature-icon">💰</div>
+
+                <div class="feature-card">                    <h3>Best Prices</h3>
+
+                    <div class="feature-icon">💰</div>                    <p>Get the best deals and discounts on train tickets across all classes.</p>
+
+                    <h3>Best Prices</h3>                </div>
+
+                    <p>Get the best deals and discounts on train tickets across all classes.</p>                <div class="feature-card">
+
+                </div>                    <div class="feature-icon">📱</div>
+
+                <div class="feature-card">                    <h3>Mobile Friendly</h3>
+
+                    <div class="feature-icon">📱</div>                    <p>Book tickets on the go with our mobile-optimized website.</p>
+
+                    <h3>Mobile Friendly</h3>                </div>
+
+                    <p>Book tickets on the go with our mobile-optimized website.</p>            </div>
+
+                </div>        </div>
+
+            </div>    </section>
+
+        </div>
+
+    </section>    <section class="trains">
+
+        <div class="container">
+
+    <section class="trains">            <h2 class="section-title">Popular Trains</h2>
+
+        <div class="container">            <div class="train-list">
+
+            <h2 class="section-title">Popular Trains</h2>                <div class="train-card">
+
+            <div class="train-list">                    <div class="train-info">
+
+                <div class="train-card">                        <h3>Rajdhani Express (12213)</h3>
+
+                    <div class="train-info">                        <div class="train-details">
+
+                        <h3>Rajdhani Express (12213)</h3>                            <span>New Delhi → Mumbai</span>
+
+                        <div class="train-details">                            <span>Departure: 16:25</span>
+
+                            <span>New Delhi → Mumbai</span>                            <span>Arrival: 08:35</span>
+
+                            <span>Departure: 16:25</span>                        </div>
+
+                            <span>Arrival: 08:35</span>                        <div class="train-classes">
+
+                        </div>                            Available: 1A, 2A, 3A
+
+                        <div class="train-classes">                        </div>
+
+                            Available: 1A, 2A, 3A                    </div>
+
+                        </div>                    <div class="train-price">
+
+                    </div>                        <div class="price">₹1,850</div>
+
+                    <div class="train-price">                        <button class="book-btn">Book Now</button>
+
+                        <div class="price">₹1,850</div>                    </div>
+
+                        <button class="book-btn">Book Now</button>                </div>
+
+                    </div>                <div class="train-card">
+
+                </div>                    <div class="train-info">
+
+                <div class="train-card">                        <h3>Shatabdi Express (12001)</h3>
+
+                    <div class="train-info">                        <div class="train-details">
+
+                        <h3>Shatabdi Express (12001)</h3>                            <span>New Delhi → Bhopal</span>
+
+                        <div class="train-details">                            <span>Departure: 06:00</span>
+
+                            <span>New Delhi → Bhopal</span>                            <span>Arrival: 11:30</span>
+
+                            <span>Departure: 06:00</span>                        </div>
+
+                            <span>Arrival: 11:30</span>                        <div class="train-classes">
+
+                        </div>                            Available: CC, EC
+
+                        <div class="train-classes">                        </div>
+
+                            Available: CC, EC                    </div>
+
+                        </div>                    <div class="train-price">
+
+                    </div>                        <div class="price">₹1,250</div>
+
+                    <div class="train-price">                        <button class="book-btn">Book Now</button>
+
+                        <div class="price">₹1,250</div>                    </div>
+
+                        <button class="book-btn">Book Now</button>                </div>
+
+                    </div>                <div class="train-card">
+
+                </div>                    <div class="train-info">
+
+                <div class="train-card">                        <h3>Duronto Express (12245)</h3>
+
+                    <div class="train-info">                        <div class="train-details">
+
+                        <h3>Duronto Express (12245)</h3>                            <span>Howrah → New Delhi</span>
+
+                        <div class="train-details">                            <span>Departure: 20:05</span>
+
+                            <span>Howrah → New Delhi</span>                            <span>Arrival: 09:00</span>
+
+                            <span>Departure: 20:05</span>                        </div>
+
+                            <span>Arrival: 09:00</span>                        <div class="train-classes">
+
+                        </div>                            Available: 1A, 2A, 3A
+
+                        <div class="train-classes">                        </div>
+
+                            Available: 1A, 2A, 3A                    </div>
+
+                        </div>                    <div class="train-price">
+
+                    </div>                        <div class="price">₹1,650</div>
+
+                    <div class="train-price">                        <button class="book-btn">Book Now</button>
+
+                        <div class="price">₹1,650</div>                    </div>
+
+                        <button class="book-btn">Book Now</button>                </div>
+
+                    </div>            </div>
+
+                </div>        </div>
+
+            </div>    </section>
+
+        </div>
+
+    </section>    <footer>
+
+        <div class="container">
+
+    <footer>            <div class="footer-content">
+
+        <div class="container">                <div class="footer-column">
+
+            <div class="footer-content">                    <h3>Quick Links</h3>
+
+                <div class="footer-column">                    <ul>
+
+                    <h3>Quick Links</h3>                        <li><a href="#">Home</a></li>
+
+                    <ul>                        <li><a href="#">Book Tickets</a></li>
+
+                        <li><a href="#">Home</a></li>                        <li><a href="#">Cancel Tickets</a></li>
+
+                        <li><a href="#">Book Tickets</a></li>                        <li><a href="#">PNR Status</a></li>
+
+                        <li><a href="#">Cancel Tickets</a></li>                    </ul>
+
+                        <li><a href="#">PNR Status</a></li>                </div>
+
+                    </ul>                <div class="footer-column">
+
+                </div>                    <h3>Information</h3>
+
+                <div class="footer-column">                    <ul>
+
+                    <h3>Information</h3>                        <li><a href="#">About Us</a></li>
+
+                    <ul>                        <li><a href="#">Contact Us</a></li>
+
+                        <li><a href="#">About Us</a></li>                        <li><a href="#">Terms & Conditions</a></li>
+
+                        <li><a href="#">Contact Us</a></li>                        <li><a href="#">Privacy Policy</a></li>
+
+                        <li><a href="#">Terms & Conditions</a></li>                    </ul>
+
+                        <li><a href="#">Privacy Policy</a></li>                </div>
+
+                    </ul>                <div class="footer-column">
+
+                </div>                    <h3>Contact Info</h3>
+
+                <div class="footer-column">                    <ul>
+
+                    <h3>Contact Info</h3>                        <li>Email: tigerparihar86@gmail.com</li>
+
+                    <ul>                        <li>Phone: +91 7388657940</li>
+
+                        <li>Email: tigerparihar86@gmail.com</li>                        <li>Address: panki Dham ,kanpur nagar</li>
+
+                        <li>Phone: +91 7388657940</li>                    </ul>
+
+                        <li>Address: panki Dham ,kanpur nagar</li>                </div>
+
+                    </ul>            </div>
+
+                </div>            <div class="copyright">
+
+            </div>                <p>&copy; 2025 RailBook - Railway Booking System. All rights reserved.</p>
+
+            <div class="copyright">            </div>
+
+                <p>&copy; 2025 RailBook - Railway Booking System. All rights reserved.</p>        </div>
+
+            </div>    </footer>
+
+        </div>
+
+    </footer>    <script src="data.js"></script>
+
+    <script src="modified.js"></script>
+
+    <script src="data.js"></script></body>
+
+    <script src="modified.js"></script></html>
+</body>
+</html>
